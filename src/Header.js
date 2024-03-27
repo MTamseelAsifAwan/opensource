@@ -11,7 +11,7 @@ const Header = () => {
         <div className="gpt3__header-content">
           <h1 className="gradient__text">Let&apos;s Explore Something amazing with Object Detection Model</h1>
           <p>The first version of Object Detection Model.</p>
-
+             <p>Now we are going to update this version</p>
           <div className="gpt3__header-content__input">
             <button type="button" >Get Started</button>
           </div>
