@@ -1,67 +1,135 @@
-Home.css
-.header {
- position: fixed;
- width: 100%;
- top: 0;
- left: 0;
- background-color: transparent;
- z-index: var(--z-fixed);
+.gpt3__navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    background-color: #000000;
+    
 }
 
-.nav {
- display: flex;
- align-items: center;
- justify-content: space-between;
- position: relative;
- height: var(--header-height);
- margin: 1rem;
+.gpt3__navbar-links{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.nav__logo {
- color: var(--first-color);
- transition: color 0.4s;
- font-size: var(--h2-font-size);
- font-family: var(--second-font);
+.gpt3__navbar-links_logo{
+    margin-right: 2rem;
 }
 
-.nav__toggle,
-.nav__close {
- font-size: 1.5rem;
- color: var(--title-color);
- cursor: pointer;
+.gpt3__navbar-links_logo img{
+    width: 72.56px;
+    height: 56.02px;
 }
 
-.nav__cta {
- background-color: var(--first-color);
- color: var(--title-color);
- border: none;
- border-radius: 4px;
- cursor: pointer;
- transition: background-color 0.3s ease;
- padding: 0.75rem 1.5rem;
-}
-.nav__list {
- display: flex;
- flex-direction: column;
- row-gap: 2.5rem;
+.gpt3__navbar-links_container{
+    display: flex;
+    flex-direction: row;
 }
 
-.nav__link {
- color: var(--title-color);
- font-weight: var(--font-semi-bold);
- transition: color 0.4s;
+.gpt3__navbar-sign{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
-.nav__link:hover {
- color: var(--first-color);
+.gpt3__navbar-links_container p,
+.gpt3__navbar-sign p,
+.gpt3__navbar-menu_container p{
+    color: #ffffff;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+    cursor: pointer;
 }
 
-.nav__close {
- position: absolute;
- top: 1rem;
- right: 1.5rem;
+.gpt3__navbar-sign button,
+.gpt3__navbar-menu_container button {
+    padding: 0.5rem 1rem;
+    background-color: #FF4820;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    line-height: 25px;
+    color: #fff;
+    border: 0;
+    outline: none;
 }
 
-.show-menu {
- right: 0;
+.gpt3__navbar-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.gpt3__navbar-menu{
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+.gpt3__navbar-menu svg{
+    cursor: pointer;
+}
+
+.gpt3__navbar-menu_container{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-footer);
+    padding: 1rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.gpt3__navbar-menu_container p {
+    margin: 0.5rem 0;
+}
+
+.gpt3__navbar-menu_container-links-sign {
+    display: none;
+}
+
+@media screen and (max-width:1050px) {
+    .gpt3__navbar-links_container{
+        display: none;
+    }
+    .gpt3__navbar-menu{
+        display: flex;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .gpt3__navbar{
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .gpt3__navbar{
+        padding: 2rem 4rem;
+    }
+    .gpt3__navbar-sign{
+        display: none;
+    }
+    .gpt3__navbar-menu_container{
+        top: 20px;
+    }
+    .gpt3__navbar-menu_container-links-sign{
+        display: block;
+    }
 }

@@ -1,23 +1,17 @@
 import React from "react";
 import Navbar from "./Navbar";
+import Header from "./Header";
 function Home() {
   return (
     <div>
         <Navbar/>
+<Header/>
     <div className="container">
       <nav style={navbarStyle}>
         <ul style={navListStyle}>
           <li style={listItemStyle}>
             <div style={contentContainerStyle}> {/* Container to align Service 1 and button */}
-              <span>Service 1</span>
-              <span style={statusStyle}>
-  Status 
-  <span style={{ color: "white" }}>:</span>
-  Running
-</span>
-              <button style={buttonStyle}>
-                View
-              </button>
+              
 
             </div>
           </li>
