@@ -1,56 +1,24 @@
-import React, { useState } from 'react'
-import "./Navbar.css"
-import ai from "../src/ai.png"
-import { RiMenu3Line, RiCloseLine } from "react-icons/ri"
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import './Navbar.css'; // Import custom CSS for styling
 
-const Menu = () => (
-  <>
-    <p><a href='#home'>Home</a></p>
-    <p><a href='#wgpt3'>About US</a></p>
- 
-  </>
-)
 
-const Navbar = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
+function Navbar1() {
   return (
-    <div className="gpt3__navbar">
-      <div className="gpt3__navbar-links">
-        <div className="gpt3__navbar-links_logo">
-          <img src={ai} alt=" Logo" />
-        </div>
-        <div className="gpt3__navbar-links_container">
-          <Menu />
-        </div>
-        <div className="gpt3__navbar-wrapper">
-
-          <div className="gpt3__navbar-sign">
-            <p>Sign in</p>
-            <button type='button'>Sign up</button>
-          </div>
-          {/* Responsive part for mobiles devices */}
-          {/* hamburger menu */}
-          <div className="gpt3__navbar-menu">
-            {toggleMenu
-              ? <RiCloseLine color="#fff" size={27} onClick={() => setToggleMenu(false)} />
-              : <RiMenu3Line color="#fff" size={27} onClick={() => setToggleMenu(true)} />
-            }
-            {toggleMenu &&
-              <div className="gpt3__navbar-menu_container scale-up-center">
-                <div className="gpt3__navbar-menu_container-links">
-                  <Menu />
-                </div>
-                <div className="gpt3__navbar-menu_container-links-sign">
-                  <p>Sign in</p>
-                  <button type='button'>Sign up</button>
-                </div>
-              </div>
-            }
-          </div>
-        </div>
-      </div>
-    </div>
-  )
+    <>
+      <br />
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home" className="brand-text"><h3>ODM</h3></Navbar.Brand>
+          <Nav className="mx-auto nav-links"> {/* mx-auto will center the Nav items */}
+            <Nav.Link href="/" className="nav-link">Home</Nav.Link>
+            <Nav.Link href="/contactUs" className="nav-link">About Us</Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
+    </>
+  );
 }
 
-export default Navbar
+export default Navbar1;

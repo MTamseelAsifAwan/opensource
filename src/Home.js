@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar1 from "./Navbar";
 import Header from "./Header";
-function Home() {
+const Home1=() => {
   return (
     <div>
-        <Navbar/>
+        <Navbar1/>
 <Header/>
     <div className="container">
       <nav style={navbarStyle}>
@@ -58,4 +58,4 @@ const buttonStyle = {
 const statusStyle={
     marginLeft:'600px',
 }
-export default Home;
+export default Home1;

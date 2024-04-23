@@ -1,12 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client'; // Import for createRoot
 import './index.css';
 import App from './App';
-import Home from './Home';
+import Home from './Home'; // Assuming Home is a component
 
-ReactDOM.render(
+const root = createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
-    <Home />
-  </React.StrictMode>,
-  document.getElementById('root')
+    {/* Decide which component to render here */}
+    <App />  {/* Or <Home /> */}
+  </React.StrictMode>
 );
